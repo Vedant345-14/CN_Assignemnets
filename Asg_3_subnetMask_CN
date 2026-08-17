@@ -1,0 +1,101 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int main() {
+   
+   string ip;
+   cout<<"Enter your  IP address :";
+   getline(cin,ip);
+   
+   string ipAddr=ip.substr(0,3);
+   
+   int ipAddre=stoi(ipAddr);
+   
+  
+   
+  if(ipAddre >= 0 && ipAddre<128)
+  {
+      cout<<"It belongs to class A"<<endl;
+      cout<<"First Octet decimal(range):0-127"<<endl;
+      cout<<"IP range : 0.0.0.0 - 127.255.255.255"<<endl;
+      cout<<"Whats Subnet ?"<<endl;
+      cout<<"It is dividing of a network into two or more smallre networks . It increases routing efficiency , the security of network and reduces the size of broadcast domain. ";
+      cout<<"What is subnet mask?"<<endl;
+      cout<<"Subnet mask is a 32bit number in the computer networks that divides the ip address into two parts.\n";
+      cout<<"Network ID : identifies the network . \n Host ID : Identifies the device on the network.\n\n";
+      cout<<"Subnet mask: 255.0.0.0\n";
+      
+      cout<<"Host per network id :"<<pow(2,24)-2<<endl;
+      cout<<"No of network id :"<<pow(2,7)<<endl;
+      
+      cout<<"Subtracting 2 because in host per network id as 1st is network address, and last is broadcast address .";
+  }
+  else if( ipAddre >= 128 && ipAddre<192)
+  {
+       cout<<"It belongs to class B"<<endl;
+       cout<<"First Octet decimal(range):128-191"<<endl;
+       cout<<"IP range : 128.0.0.0 - 191.255.255.255"<<endl;
+       cout<<"Whats Subnet ?"<<endl;
+       cout<<"It is dividing of a network into two or more smallre networks . It increases routing efficiency , the security of network and reduces the size of broadcast domain.\n\n";
+       cout<<"What is subnet mask?"<<endl;
+      cout<<"Subnet mask is a 32bit number in the computer networks that divides the ip address into two parts.\n";
+      cout<<"Network ID : identifies the network . \n Host ID : Identifies the device on the network.\n\n";
+      cout<<"Subnet mask: 255.255.0.0\n";
+      cout<<"Host per network id :"<<pow(2,16)-2<<endl;
+      cout<<"No of network id :"<<pow(2,14)<<endl;
+      
+      cout<<"Subtracting 2 because in host per network id as 1st is network address, and last is broadcast address .";
+  }
+  else if( ipAddre >= 192 && ipAddre<224)
+  {
+       cout<<"It belongs to class C"<<endl;
+       cout<<"First Octet decimal(range):192-223"<<endl;
+       cout<<"IP range : 192.0.0.0 - 223.255.255.255"<<endl;
+       cout<<"Whats Subnet ?"<<endl;
+       cout<<"It is dividing of a network into two or more smallre networks . It increases routing efficiency , the security of network and reduces the size of broadcast domain.\n\n";
+       
+       cout<<"What is subnet mask?"<<endl;
+      cout<<"Subnet mask is a 32bit number in the computer networks that divides the ip address into two parts.\n";;
+      cout<<"Network ID : identifies the network . \n Host ID : Identifies the device on the network.\n\n";
+      cout<<"Subnet mask: 255.255.255.0\n";
+      cout<<"Host per network id :"<<pow(2,8)-2<<endl;
+      cout<<"No of network id :"<<pow(2,21)<<endl;
+      
+      cout<<"Subtracting 2 because in host per network id as 1st is network address, and last is broadcast address .";
+  }
+  else if(ipAddre >= 224    && ipAddre<240)
+  {
+       cout<<"It belongs to class D"<<endl;
+       cout<<"First Octet decimal(range):224-239"<<endl;
+       cout<<"IP range : 224.0.0.0 - 239.0.0.0"<<endl;
+       cout<<"Whats Subnet ?"<<endl;
+      cout<<"It is dividing of a network into two or more smallre networks . It increases routing efficiency , the security of network and reduces the size of broadcast domain.\n\n";
+      cout<<"What is subnet mask?"<<endl;
+      cout<<"Subnet mask is a 32bit number in the computer networks that divides the ip address into two parts.\n";
+      cout<<"Network ID : identifies the network . \n Host ID : Identifies the device on the network.\n\n";
+      
+      
+  }
+  else if(ipAddre >= 240 && ipAddre<256)
+  {
+       cout<<"It belongs to class E"<<endl;
+       cout<<"First Octet decimal(range); 240-256"<<endl;
+       cout<<"IP range : 240.0.0.0-255.255.255.255"<<endl;
+       cout<<"Whats Subnet ?"<<endl;
+      cout<<"It is dividing of a network into two or more smallre networks . It increases routing efficiency , the security of network and reduces the size of broadcast domain.\n\n";
+      cout<<"What is subnet mask?"<<endl;
+      cout<<"Subnet mask is a 32bit number in the computer networks that divides the ip address into two parts.\n";
+      cout<<"Network ID : identifies the network . \n Host ID : Identifies the device on the network.\n\n";
+      
+      
+      
+  }
+  else
+  {
+       cout<<"Invalid ouput";
+  }
+  
+    return 0;
+}
